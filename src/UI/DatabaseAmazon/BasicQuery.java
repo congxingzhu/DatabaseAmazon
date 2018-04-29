@@ -8,6 +8,7 @@ package UI.DatabaseAmazon;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.LinkedList;
 
 /**
@@ -47,7 +48,7 @@ public class BasicQuery {
             _search_review_by_asin_statement = _mysqlDB.prepareStatement(_search_review_by_asin);
             _search_by_cid_statement = _mysqlDB.prepareStatement(_search_by_cid);
             _search_similar_group_statement = _mysqlDB.prepareStatement(_search_similar_group);
-        } catch (Exception e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
@@ -71,7 +72,7 @@ public class BasicQuery {
             }
             
             product_set.close();
-        } catch(Exception e) {
+        } catch(SQLException e) {
             e.printStackTrace();
         }
         return result;
@@ -94,7 +95,7 @@ public class BasicQuery {
                 result.add(r);
             }
             review_set.close();
-        } catch (Exception e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return result;
@@ -117,7 +118,7 @@ public class BasicQuery {
                 result.add(r);
             }
             review_set.close();
-        } catch (Exception e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return result;
@@ -140,7 +141,7 @@ public class BasicQuery {
                 result.add(p);
             }
             product_set.close();
-        } catch(Exception e) {
+        } catch(SQLException e) {
             e.printStackTrace();
         }
        
@@ -169,7 +170,7 @@ public class BasicQuery {
             }
             
             product_set.close();
-        } catch (Exception e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         

@@ -40,6 +40,7 @@ public class LoginUI extends javax.swing.JFrame {
         jAdvancedButton = new javax.swing.JButton();
         jBasicButton = new javax.swing.JButton();
         jPwd = new javax.swing.JPasswordField();
+        jUpdateButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -70,6 +71,14 @@ public class LoginUI extends javax.swing.JFrame {
             }
         });
 
+        jUpdateButton.setText("Update");
+        jUpdateButton.setEnabled(false);
+        jUpdateButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jUpdateButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -77,23 +86,22 @@ public class LoginUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(53, 53, 53)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jUserLabel)
-                    .addComponent(jPwdLabel))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jUser)
-                    .addComponent(jPwd, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(64, Short.MAX_VALUE)
-                .addComponent(jAdvancedButton, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(63, 63, 63)
-                    .addComponent(jBasicButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(61, 61, 61)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jBasicButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jAdvancedButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jUpdateButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(60, 60, 60))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jUserLabel)
+                            .addComponent(jPwdLabel))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jUser)
+                            .addComponent(jPwd, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE))
+                        .addContainerGap(73, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -108,14 +116,13 @@ public class LoginUI extends javax.swing.JFrame {
                     .addComponent(jPwd, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(33, 33, 33)
                 .addComponent(jLogin)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
+                .addGap(33, 33, 33)
+                .addComponent(jBasicButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jAdvancedButton)
-                .addContainerGap())
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(200, Short.MAX_VALUE)
-                    .addComponent(jBasicButton)
-                    .addGap(51, 51, 51)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jUpdateButton)
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         pack();
@@ -135,6 +142,7 @@ public class LoginUI extends javax.swing.JFrame {
             //new BasicQueryUI(_mysqlDB).setVisible(true);
             jBasicButton.setEnabled(true);
             jAdvancedButton.setEnabled(true);
+            jUpdateButton.setEnabled(true);
         } else {
             JOptionPane.showMessageDialog(this, "Cannot connect the database");
         }
@@ -148,7 +156,13 @@ public class LoginUI extends javax.swing.JFrame {
 
     private void jAdvancedButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAdvancedButtonActionPerformed
         // TODO add your handling code here:
+        new AdvancedQueryUI(_mysqlDB).setVisible(true);
     }//GEN-LAST:event_jAdvancedButtonActionPerformed
+
+    private void jUpdateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jUpdateButtonActionPerformed
+        // TODO add your handling code here:
+        new UpdateUI(_mysqlDB).setVisible(true);
+    }//GEN-LAST:event_jUpdateButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -192,6 +206,7 @@ public class LoginUI extends javax.swing.JFrame {
     private javax.swing.JButton jLogin;
     private javax.swing.JPasswordField jPwd;
     private javax.swing.JLabel jPwdLabel;
+    private javax.swing.JButton jUpdateButton;
     private javax.swing.JTextField jUser;
     private javax.swing.JLabel jUserLabel;
     // End of variables declaration//GEN-END:variables
