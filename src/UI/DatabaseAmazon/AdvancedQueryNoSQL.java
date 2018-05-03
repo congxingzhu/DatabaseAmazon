@@ -15,7 +15,7 @@ import java.util.LinkedList;
  *
  * @author sswu
  */
-public class AdvancedQuery {
+public class AdvancedQueryNoSQL {
     
     Connection _mysqlDB;
     
@@ -36,7 +36,7 @@ public class AdvancedQuery {
             + "(select asin1 from similarTo where asin2 = ?) Y where p.asin = X.asin2 or p.asin = Y.asin1 or p.asin = ?) Z";
     private PreparedStatement _highest_salerank_similar_statement;
     
-    public AdvancedQuery(Connection mysqlDB) {
+    public AdvancedQueryNoSQL(Connection mysqlDB) {
         _mysqlDB = mysqlDB;
     }
     

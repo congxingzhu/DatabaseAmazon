@@ -65,6 +65,7 @@ public class AdvancedQueryUI extends javax.swing.JFrame {
         jComboProduct = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("MySQL");
 
         jComboType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Please choose one type", "Book", "DVD", "Music", "Video" }));
         jComboType.addActionListener(new java.awt.event.ActionListener() {
@@ -108,7 +109,7 @@ public class AdvancedQueryUI extends javax.swing.JFrame {
 
         jLabel4.setText("In similar group, which product has the highest salerank? Show product name");
 
-        jComboProduct.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Please choose a product", "0827229534", "0842328327", "1577943082", "0486220125", "B00000AU3R" }));
+        jComboProduct.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Please choose a product", "1577943082", "B00000AU3R", "6472184", "2154129", "2250535" }));
         jComboProduct.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboProductActionPerformed(evt);
