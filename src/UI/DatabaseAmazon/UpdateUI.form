@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="jProductASIN" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jAsinInsert" min="-2" pref="130" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="jCatIDLabel" min="-2" pref="78" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jBelongToIdInsert" min="-2" pref="135" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="jInsertBelongToButton" min="-2" pref="159" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="jProductASINLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jAsin" min="-2" pref="130" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="jIDlabel" min="-2" pref="78" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jBelongToId" min="-2" pref="135" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="jUpdatetBelongToButton" min="-2" pref="159" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jShowCatButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="jProductNameLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jProductName" min="-2" pref="268" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="jDeleteButton" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="jIdUpdateLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="jCatUpdateId" min="-2" pref="130" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="jIdLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="jCatIdInsert" min="-2" pref="130" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="jNameLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="jCatNameInsert" min="-2" pref="133" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jCatInsertButton" min="-2" pref="153" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="jNameUpdateLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="jCatUpdateName" min="-2" pref="133" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jCatUpdateButton" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="198" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jProductType" alignment="0" min="-2" pref="175" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jScrollPane2" alignment="0" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jCategoryButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="jCatNameSearch" min="-2" pref="143" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace pref="34" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+              <Component id="jProductType" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jScrollPane2" min="-2" pref="163" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jProductName" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jShowCatButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jProductNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jDeleteButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jScrollPane1" min="-2" pref="170" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jCatUpdateName" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jIdUpdateLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jCatUpdateId" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jNameUpdateLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jCatUpdateButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jIdLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jCatIdInsert" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jCatNameInsert" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jCatInsertButton" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jProductASINLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jAsin" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jIDlabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jBelongToId" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jUpdatetBelongToButton" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jProductASIN" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jAsinInsert" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jCatIDLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jBelongToIdInsert" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jInsertBelongToButton" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jCategoryButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jCatNameSearch" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="57" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JButton" name="jCategoryButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="search category by name"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCategoryButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jCatNameSearch">
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="jCatTable">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="4" rowCount="4">
+                <Column editable="true" title="Title 1" type="java.lang.Object"/>
+                <Column editable="true" title="Title 2" type="java.lang.Object"/>
+                <Column editable="true" title="Title 3" type="java.lang.Object"/>
+                <Column editable="true" title="Title 4" type="java.lang.Object"/>
+              </Table>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jCatTableMouseClicked"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JButton" name="jCatInsertButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="insert a new category"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCatInsertButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jIdLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="ID: "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jCatIdInsert">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jNameLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Name: "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jCatNameInsert">
+    </Component>
+    <Component class="javax.swing.JButton" name="jDeleteButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="delete choosing category"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jDeleteButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jCatUpdateButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="update an exist category"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCatUpdateButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jIdUpdateLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="ID: "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jCatUpdateId">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jNameUpdateLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Name: "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jCatUpdateName">
+    </Component>
+    <Component class="javax.swing.JComboBox" name="jProductType">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="5">
+            <StringItem index="0" value="show product list by type"/>
+            <StringItem index="1" value="Book"/>
+            <StringItem index="2" value="DVD"/>
+            <StringItem index="3" value="Music"/>
+            <StringItem index="4" value="Video"/>
+          </StringArray>
+        </Property>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jProductTypeActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="jProductTable">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="4" rowCount="4">
+                <Column editable="true" title="Title 1" type="java.lang.Object"/>
+                <Column editable="true" title="Title 2" type="java.lang.Object"/>
+                <Column editable="true" title="Title 3" type="java.lang.Object"/>
+                <Column editable="true" title="Title 4" type="java.lang.Object"/>
+              </Table>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jProductTableMouseClicked"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JLabel" name="jProductNameLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="product name: "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jProductName">
+    </Component>
+    <Component class="javax.swing.JButton" name="jShowCatButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="show category"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jShowCatButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jProductASINLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Product ASIN: "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jIDlabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Category ID: "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jBelongToId">
+    </Component>
+    <Component class="javax.swing.JButton" name="jUpdatetBelongToButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="update BelongTo relation"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jUpdatetBelongToButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jAsin">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jProductASIN">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Product ASIN: "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jCatIDLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Category ID: "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jBelongToIdInsert">
+    </Component>
+    <Component class="javax.swing.JButton" name="jInsertBelongToButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="insert to BelongTo relation"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jInsertBelongToButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jAsinInsert">
+    </Component>
+  </SubComponents>
+</Form>

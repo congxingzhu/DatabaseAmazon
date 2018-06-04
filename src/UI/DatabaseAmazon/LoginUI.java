@@ -7,6 +7,9 @@ package UI.DatabaseAmazon;
 
 import java.sql.Connection;
 import javax.swing.JOptionPane;
+import com.mongodb.client.MongoDatabase; 
+import com.mongodb.MongoClient; 
+import com.mongodb.MongoCredential;  
 
 /**
  *
@@ -16,6 +19,7 @@ public class LoginUI extends javax.swing.JFrame {
     
     private CreateMysqlConnection mysqlConnection;
     private Connection _mysqlDB;
+    private MongoDatabase mongodb;
 
     /**
      * Creates new form LoginUI
@@ -40,6 +44,9 @@ public class LoginUI extends javax.swing.JFrame {
         jAdvancedButton = new javax.swing.JButton();
         jBasicButton = new javax.swing.JButton();
         jPwd = new javax.swing.JPasswordField();
+        jUpdateButton = new javax.swing.JButton();
+        jNoSQLBtn = new javax.swing.JButton();
+        jNoSQLLogin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -70,6 +77,30 @@ public class LoginUI extends javax.swing.JFrame {
             }
         });
 
+        jUpdateButton.setText("Update");
+        jUpdateButton.setEnabled(false);
+        jUpdateButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jUpdateButtonActionPerformed(evt);
+            }
+        });
+
+        jNoSQLBtn.setText("NoSQL");
+        jNoSQLBtn.setEnabled(false);
+        jNoSQLBtn.setName("nosql"); // NOI18N
+        jNoSQLBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jNoSQLBtnActionPerformed(evt);
+            }
+        });
+
+        jNoSQLLogin.setText("NoSQL Login");
+        jNoSQLLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jNoSQLLoginActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -77,23 +108,28 @@ public class LoginUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(53, 53, 53)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jUserLabel)
-                    .addComponent(jPwdLabel))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jUser)
-                    .addComponent(jPwd, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(64, Short.MAX_VALUE)
-                .addComponent(jAdvancedButton, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(63, 63, 63)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(jLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jUserLabel)
+                            .addComponent(jPwdLabel))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jUser, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jPwd)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jNoSQLLogin))
+                    .addComponent(jNoSQLBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jBasicButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(61, 61, 61)))
+                    .addComponent(jAdvancedButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jUpdateButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(60, 60, 60))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -107,15 +143,18 @@ public class LoginUI extends javax.swing.JFrame {
                     .addComponent(jPwdLabel)
                     .addComponent(jPwd, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(33, 33, 33)
-                .addComponent(jLogin)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLogin)
+                    .addComponent(jNoSQLLogin))
+                .addGap(33, 33, 33)
+                .addComponent(jBasicButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jAdvancedButton)
-                .addContainerGap())
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(200, Short.MAX_VALUE)
-                    .addComponent(jBasicButton)
-                    .addGap(51, 51, 51)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jUpdateButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jNoSQLBtn)
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         pack();
@@ -135,6 +174,7 @@ public class LoginUI extends javax.swing.JFrame {
             //new BasicQueryUI(_mysqlDB).setVisible(true);
             jBasicButton.setEnabled(true);
             jAdvancedButton.setEnabled(true);
+            jUpdateButton.setEnabled(true);
         } else {
             JOptionPane.showMessageDialog(this, "Cannot connect the database");
         }
@@ -148,7 +188,36 @@ public class LoginUI extends javax.swing.JFrame {
 
     private void jAdvancedButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAdvancedButtonActionPerformed
         // TODO add your handling code here:
+        new AdvancedQueryUI(_mysqlDB).setVisible(true);
     }//GEN-LAST:event_jAdvancedButtonActionPerformed
+
+    private void jUpdateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jUpdateButtonActionPerformed
+        // TODO add your handling code here:
+        new UpdateUI(_mysqlDB).setVisible(true);
+    }//GEN-LAST:event_jUpdateButtonActionPerformed
+
+    private void jNoSQLBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNoSQLBtnActionPerformed
+        // TODO add your handling code here:
+        new AdvancedQueryUINoSQL(mongodb).setVisible(true);
+    }//GEN-LAST:event_jNoSQLBtnActionPerformed
+
+    private void jNoSQLLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNoSQLLoginActionPerformed
+        // TODO add your handling code here:
+        MongoClient mongo = new MongoClient( "localhost" , 27017 );
+        
+        // Creating Credentials 
+        MongoCredential credential; 
+        credential = MongoCredential.createCredential("sampleUser", "myDb", 
+         "password".toCharArray()); 
+        System.out.println("Connected to the database successfully");
+        
+        this.mongodb = mongo.getDatabase("local");
+        if (this.mongodb != null) {
+            jNoSQLBtn.setEnabled(true);
+        } else {
+            JOptionPane.showMessageDialog(this, "Cannot connect the MongoDB");
+        }
+    }//GEN-LAST:event_jNoSQLLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -190,8 +259,11 @@ public class LoginUI extends javax.swing.JFrame {
     private javax.swing.JButton jAdvancedButton;
     private javax.swing.JButton jBasicButton;
     private javax.swing.JButton jLogin;
+    private javax.swing.JButton jNoSQLBtn;
+    private javax.swing.JButton jNoSQLLogin;
     private javax.swing.JPasswordField jPwd;
     private javax.swing.JLabel jPwdLabel;
+    private javax.swing.JButton jUpdateButton;
     private javax.swing.JTextField jUser;
     private javax.swing.JLabel jUserLabel;
     // End of variables declaration//GEN-END:variables
